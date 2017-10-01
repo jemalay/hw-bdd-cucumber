@@ -49,5 +49,5 @@ end
 
 Then /I should see all the movies/ do
   # Make sure that all the movies in the app are visible in the table
-  expect(page).to have_css("table#movies tbody tr",:count => movieCounter)
+  expect(page).to have_css("table#movies tbody tr",:count => (Movie.count +1))
 end
